@@ -17,11 +17,11 @@ app.use(cors());
 
 // Configuring Environment Variables
 const PORT = process.env.PORT;
-const MONGO_URL_LOCAL = process.env.MONGO_URL_LOCAL;
-// const MONGO_URL_ATLAS = process.env.MONGO_URL_ATLAS;
+// const MONGO_URL_LOCAL = process.env.MONGO_URL_LOCAL;
+const MONGO_URL_ATLAS = process.env.MONGO_URL_ATLAS;
 
 //Setting Database Connectivity
-connectDatabase(MONGO_URL_LOCAL);
+connectDatabase(MONGO_URL_ATLAS);
 
 // Initializing Routes
 app.use("/api/all", allRouter);
